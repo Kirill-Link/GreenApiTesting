@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+    <title>GreenAPI Interface</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header__items">
+                <div class="header__logo">
+                    <img src="https://console.green-api.com/assets_1.1.48/header-logo-736d61f6.png" />
+                    <span>GREEN API</span>
+                </div>
+                <div class="header__links">
+                    <a href="https://green-api.com/docs/" target="_blank" class="header__link">Docs</a>
+                    <a href="#" class="header__link" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="forms__titles">
+                <h2>Interface:</h2>
+                <h2>Response:</h2>
+            </div>
+
+            <div class="greenapi__interface">
+                <div class="interface__form">
+                    <form method="post">
+                        <div class="forms__items">
+                            <div class="form__item">
+                                {{ form.as_p }}
+                            </div>
+                            <div class="form__item">
+                                <button type="submit" name="action" value="getSettings">Get Settings</button>
+                                <button type="submit" name="action" value="getStateInstance">Get State</button>
+                            </div>
+                            <div class="form__item">
+                                <p>Отправка сообщения</p>
+                                <div class="form__phone">
+                                    <input type="text" name="chatId" placeholder="Телефон">
+                                    <select name="code">
+                                        <option value="@c.us">@c.us</option>
+                                        <option value="@g.us">@g.us</option>
+                                    </select>
+                                </div>
+                                <input type="text" name="message" placeholder="Сообщение">
+                                <button type="submit" name="action" value="sendMessage">Send Message</button>
+                            </div>
+                            <div class="form__item">
+                                <p>Отправка файла</p>
+                                <input type="text" name="urlFile" placeholder="URL файла">
+                                <input type="text" name="fileName" placeholder="Название файла c расширением">
+                                <button type="submit" name="action" value="sendFileByUrl">Send File by URL</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="interface__response">
+                    {% if response_data %}
+                    <pre>{{ response_data | safe }}</pre>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

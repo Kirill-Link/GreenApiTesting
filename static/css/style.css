@@ -1,0 +1,148 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #d9d9d9;
+    margin-bottom: 20px;
+}
+.header__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+.header__logo img {
+    width: 60px;
+}
+.header__links {
+    display: flex;
+    align-items: center;
+}
+.header__links a {
+    display: block;
+    width: 100px;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    background-color: #4CAE4F;
+
+    margin-right: 10px;
+    border-radius: 20px;
+}
+.header__links a:last-child {
+    margin-right: 0;
+}
+
+
+
+
+.forms__titles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forms__titles h2 {
+    width: 48%;
+}
+
+form {
+    border: 1px solid #d9d9d9;
+}
+
+.greenapi__interface {
+    display: flex;
+    justify-content: space-between;
+}
+
+.interface__form {
+    width:48%;
+}
+
+.form__item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px 10px 10px;
+
+}
+
+.form__item label {
+    display: block;
+}
+
+.form__item input {
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+.form__item:first-child {
+    display: flex;
+    flex-direction: row;
+}
+.form__item p {
+    width: 100%;
+}
+
+.form__item p input {
+    width:80%;
+    margin-top: 15px;
+}
+.form__phone {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__phone input {
+    width: 82%;
+}
+
+.form__phone select {
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid #d9d9d9;
+}
+
+.form__item button {
+    background-color: #4CAE4F;
+    border: 1px solid #4CAE4F;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 15px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.interface__response {
+    width: 48%;
+    border: 1px solid #d9d9d9;
+}
+
+
+.interface__response pre {
+    padding: 0 20px;
+    white-space: pre-wrap; 
+    word-wrap: break-word; 
+}
+
+.interface__response {
+    max-width: 100%; 
+    overflow: auto;  
+}
+
+.interface__response pre {
+    white-space: pre-wrap; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+}
